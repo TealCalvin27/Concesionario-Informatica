@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop - Venta de Autos</title>
+    <link rel="stylesheet" href="Autos.css">
+</head>
+<body>
+    <header>
+        <section class="contenedor-logo">
+            <section class="logo-empresa">
+                <h1>LOOP</h1> 
+            </section>
+            <section class="titulo-logo">
+                <img src="/pagina principal/logo.jpg" alt="logo">
+            </section>
+        </section>    
+        <p class="tagline">Tu solución en automoción</p>
+    </header>
+
+    <nav class="nav-principal">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#autos">Nuestros Autos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    
+    <main>
+        
+        <section class="info-empresa">
+            <h2>Bienvenido a LOOP</h2>
+            
+            <article class="mision">
+                <h3>Misión</h3>
+                <p>Ofrecer vehículos de calidad a precios accesibles, con un servicio profesional y confiable para nuestros clientes en todo el país.</p>
+            </article>
+
+            <article class="vision">
+                <h3>Visión</h3>
+                <p>Ser la empresa de venta de autos más confiable y reconocida en todo México, expandiendo nuestro alcance a nuevos países.</p>
+            </article>
+        </section>
+
+        <section class="titulo-galeria-autos">
+            <h2>Nuestros autos</h2>
+        </section>
+
+        <section class="galeria-autos" id="autos">
+            
+            <article class="tarjeta-auto" onclick="irA('sedanes.html')">
+                <img src="/pagina principal/sedanes.webp" alt="Sedanes">
+                <h3>Sedanes</h3>
+                <p>Autos cómodos y elegantes para uso familiar</p>
+            </article>
+
+            <article class="tarjeta-auto" onclick="irA('suv.html')">
+                <img src="/pagina principal/suvs.jpg" alt="SUVs">
+                <h3>SUVs</h3>
+                <p>Vehículos robustos y versátiles</p>
+            </article>
+
+            <article class="tarjeta-auto" onclick="irA('pickups.html')">
+                <img src="/pagina principal/pickups.jpg" alt="Pickups">
+                <h3>Pickups</h3>
+                <p>Camiones de trabajo y aventura</p>
+            </article>
+
+            <article class="tarjeta-auto" onclick="irA('superdeportivos.html')">
+                <img src="/pagina principal/superdeportivos.jpg" alt="Superdeportivos">
+                <h3>Superdeportivos</h3>
+                <p>Vehículos lujosos y rápidos</p>
+            </article>
+        </section>
+
+        
+        <section class="formulario-seccion" id="contacto">
+            <h2>Compra o Vende tu Auto</h2>
+            <form id="formularioAutos" onsubmit="procesarFormulario(event)">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="tipo">¿Qué deseas hacer?</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="comprar">Comprar un auto</option>
+                    <option value="vender">Vender mi auto</option>
+                </select>
+
+                <label for="mensaje">Detalles:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit" class="boton-enviar">Enviar Solicitud</button>
+            </form>
+
+            <div id="respuestaFormulario" class="respuesta"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 LOOP - Venta de Autos. Todos los derechos reservados.</p>
+        <p>Cosoleacaque, Veracruz, México</p>
+    </footer>
+
+    <script src="Autos.js"></script>
+</body>
+</html>
